@@ -16,7 +16,11 @@ const app = express();
 // CORS configuration - MUST BE FIRST
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? [process.env.FRONTEND_URL] 
+    ? [
+        process.env.FRONTEND_URL,
+        'https://todo-frontend-fz9h.onrender.com',
+        'https://todo-frontend.onrender.com'
+      ].filter(Boolean)
     : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5177'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
