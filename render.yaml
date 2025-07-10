@@ -3,7 +3,6 @@ services:
     name: todo-backend
     env: docker
     sourceDir: backend
-    dockerfilePath: ./Dockerfile
     envVars:
       - key: NODE_ENV
         value: production
@@ -20,7 +19,6 @@ services:
     name: todo-frontend
     env: docker
     sourceDir: frontend
-    dockerfilePath: ./Dockerfile
     envVars:
       - key: VITE_API_URL
         value: https://todo-backend.onrender.com/api
