@@ -1,0 +1,60 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="50" fill="white" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="80" fill="white" opacity="0.1"/>
+  <circle cx="1050" cy="150" r="30" fill="white" opacity="0.1"/>
+  
+  <!-- Main content area -->
+  <rect x="100" y="100" width="1000" height="430" rx="20" fill="white" opacity="0.95"/>
+  
+  <!-- Icon -->
+  <g transform="translate(150, 200)">
+    <circle cx="40" cy="40" r="40" fill="#007bff"/>
+    <path d="M20 30h8v8H20v-8zm0 12h8v8H20v-8zm0 12h8v8H20v-8z" fill="white"/>
+    <path d="M32 31l6 6 12-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M32 43l6 6 12-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M32 55l6 6 12-12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="250" y="240" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#333">
+    TodoList
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="250" y="290" font-family="Arial, sans-serif" font-size="24" fill="#666">
+    Quản lý công việc hiệu quả
+  </text>
+  
+  <!-- Features -->
+  <g transform="translate(250, 350)">
+    <circle cx="15" cy="15" r="8" fill="#28a745"/>
+    <text x="35" y="20" font-family="Arial, sans-serif" font-size="18" fill="#333">Tạo và quản lý task dễ dàng</text>
+  </g>
+  
+  <g transform="translate(250, 390)">
+    <circle cx="15" cy="15" r="8" fill="#ffc107"/>
+    <text x="35" y="20" font-family="Arial, sans-serif" font-size="18" fill="#333">Thiết lập độ ưu tiên và deadline</text>
+  </g>
+  
+  <g transform="translate(250, 430)">
+    <circle cx="15" cy="15" r="8" fill="#17a2b8"/>
+    <text x="35" y="20" font-family="Arial, sans-serif" font-size="18" fill="#333">Thống kê và báo cáo chi tiết</text>
+  </g>
+  
+  <!-- URL -->
+  <text x="250" y="500" font-family="Arial, sans-serif" font-size="16" fill="#007bff">
+    todo-frontend-fz9h.onrender.com
+  </text>
+</svg> 

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /login
+Allow: /register
+Allow: /dashboard
+
+# Sitemap
+Sitemap: https://todo-frontend-fz9h.onrender.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Host
+Host: https://todo-frontend-fz9h.onrender.com 

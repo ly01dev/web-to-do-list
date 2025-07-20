@@ -1,0 +1,13 @@
+/* TEAM */
+    Developer: ly01dev
+    Contact: amnhacthuchanh@gmail.com
+    From: Vietnam
+
+/* SITE */
+    Last update: 2025/01/20
+    Language: Vietnamese
+    Doctype: HTML5
+    IDE: Visual Studio Code
+    Standards: HTML5, CSS3, JavaScript ES6+
+    Components: React, TypeScript, Node.js, MongoDB
+    Software: Vite, Express.js 

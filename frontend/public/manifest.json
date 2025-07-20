@@ -1,0 +1,25 @@
+{
+  "name": "TodoList - Quản lý công việc hiệu quả",
+  "short_name": "TodoList",
+  "description": "Ứng dụng quản lý công việc miễn phí với giao diện đẹp, tính năng đầy đủ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/todo-icon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/todo-icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["productivity", "business"],
+  "lang": "vi",
+  "dir": "ltr"
+} 
