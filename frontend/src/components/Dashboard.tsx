@@ -16,7 +16,10 @@ import {
 import { useAuth } from '../contexts/AuthContext';
 import { todoApi } from '../services/api';
 import type { Todo, CreateTodoData } from '../types';
+<<<<<<< HEAD
 import { formatDateForDisplay, formatDateForInput, convertLocalToUTC } from '../utils/dateUtils';
+=======
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
 import toast from 'react-hot-toast';
 
 const Dashboard: React.FC = () => {
@@ -121,6 +124,7 @@ const Dashboard: React.FC = () => {
     }
 
     try {
+<<<<<<< HEAD
       // Convert local datetime to UTC before sending to backend
       const todoData = {
         ...newTodo,
@@ -129,6 +133,9 @@ const Dashboard: React.FC = () => {
       };
 
       const response = await todoApi.create(todoData);
+=======
+      const response = await todoApi.create(newTodo);
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
       if (response.success && response.data) {
         setTodos([response.data, ...todos]);
         calculateStats([response.data, ...todos]);
@@ -156,17 +163,27 @@ const Dashboard: React.FC = () => {
     }
 
     try {
+<<<<<<< HEAD
       // Convert local datetime to UTC before sending to backend
       const todoData = {
+=======
+      const response = await todoApi.update(editingTodo._id, {
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
         title: editingTodo.title,
         description: editingTodo.description,
         priority: editingTodo.priority,
         isPublic: editingTodo.isPublic,
+<<<<<<< HEAD
         startDate: editingTodo.startDate ? convertLocalToUTC(editingTodo.startDate) : undefined,
         dueDate: editingTodo.dueDate ? convertLocalToUTC(editingTodo.dueDate) : undefined
       };
 
       const response = await todoApi.update(editingTodo._id, todoData);
+=======
+        startDate: editingTodo.startDate,
+        dueDate: editingTodo.dueDate
+      });
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
       if (response.success && response.data) {
         setTodos(todos.map(todo => 
           todo._id === editingTodo._id ? response.data! : todo
@@ -260,9 +277,22 @@ const Dashboard: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
   // Use utility functions for date formatting
   const formatDate = formatDateForDisplay;
   const formatDateTimeForInput = formatDateForInput;
+=======
+  const formatDate = (dateString: string) => {
+    if (!dateString) return '';
+    return new Date(dateString).toLocaleDateString('vi-VN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
 
   const handleTabChange = (tabKey: string | null) => {
     const newTab = tabKey || 'todos';
@@ -822,7 +852,11 @@ const Dashboard: React.FC = () => {
                     <Form.Label>Thời gian bắt đầu</Form.Label>
                     <Form.Control
                       type="datetime-local"
+<<<<<<< HEAD
                       value={editingTodo.startDate ? formatDateTimeForInput(editingTodo.startDate) : ''}
+=======
+                      value={editingTodo.startDate ? editingTodo.startDate.slice(0, 16) : ''}
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
                       onChange={(e) => setEditingTodo({...editingTodo, startDate: e.target.value})}
                     />
                   </Form.Group>
@@ -832,7 +866,11 @@ const Dashboard: React.FC = () => {
                     <Form.Label>Thời gian dự kiến hoàn thành</Form.Label>
                     <Form.Control
                       type="datetime-local"
+<<<<<<< HEAD
                       value={editingTodo.dueDate ? formatDateTimeForInput(editingTodo.dueDate) : ''}
+=======
+                      value={editingTodo.dueDate ? editingTodo.dueDate.slice(0, 16) : ''}
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
                       onChange={(e) => setEditingTodo({...editingTodo, dueDate: e.target.value})}
                     />
                   </Form.Group>

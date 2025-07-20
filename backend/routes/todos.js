@@ -88,6 +88,7 @@ router.post('/', auth, ...validateTodo, async (req, res) => {
       });
     }
 
+<<<<<<< HEAD
     // Convert datetime strings to proper Date objects with timezone handling
     const processDateTime = (dateString) => {
       if (!dateString) return null;
@@ -107,13 +108,20 @@ router.post('/', auth, ...validateTodo, async (req, res) => {
       return new Date(dateString);
     };
 
+=======
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
     const todo = new Todo({
       title,
       description,
       priority: priority || 'medium',
       isPublic: isPublic || false,
+<<<<<<< HEAD
       startDate: processDateTime(startDate),
       dueDate: processDateTime(dueDate),
+=======
+      startDate: startDate || null,
+      dueDate: dueDate || null,
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
       user: req.user._id // Use _id instead of id
     });
 
@@ -169,6 +177,7 @@ router.put('/:id', auth, ...validateTodo, async (req, res) => {
       });
     }
 
+<<<<<<< HEAD
     // Convert datetime strings to proper Date objects with timezone handling
     const processDateTime = (dateString) => {
       if (!dateString) return null;
@@ -188,13 +197,20 @@ router.put('/:id', auth, ...validateTodo, async (req, res) => {
       return new Date(dateString);
     };
 
+=======
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
     // Update fields
     if (title !== undefined) todo.title = title;
     if (description !== undefined) todo.description = description;
     if (priority !== undefined) todo.priority = priority;
     if (isPublic !== undefined) todo.isPublic = isPublic;
+<<<<<<< HEAD
     if (startDate !== undefined) todo.startDate = processDateTime(startDate);
     if (dueDate !== undefined) todo.dueDate = processDateTime(dueDate);
+=======
+    if (startDate !== undefined) todo.startDate = startDate || null;
+    if (dueDate !== undefined) todo.dueDate = dueDate || null;
+>>>>>>> e874cdcc9405843dab5928507c5b1075b8f0497c
 
     const updatedTodo = await todo.save();
     

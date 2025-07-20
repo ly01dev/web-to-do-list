@@ -1,20 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Container, 
-  Row, 
-  Col, 
-  Card, 
-  Button, 
-  Form, 
-  Spinner, 
-  Badge, 
-  Modal 
-} from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Modal, Form, Badge, Spinner } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import { todoApi } from '../services/api';
 import type { Todo, CreateTodoData } from '../types';
 import { formatDateForDisplay, formatDateForInput, convertLocalToUTC } from '../utils/dateUtils';
-import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const HomePage: React.FC = () => {
@@ -467,21 +457,21 @@ const HomePage: React.FC = () => {
                 <Col md={6}>
                   <Form.Group className="mb-3">
                     <Form.Label>Thời gian bắt đầu</Form.Label>
-                                          <Form.Control
-                        type="datetime-local"
-                        value={editingTodo.startDate ? formatDateTimeForInput(editingTodo.startDate) : ''}
-                        onChange={(e) => setEditingTodo({...editingTodo, startDate: e.target.value})}
-                      />
+                    <Form.Control
+                      type="datetime-local"
+                      value={editingTodo.startDate ? formatDateTimeForInput(editingTodo.startDate) : ''}
+                      onChange={(e) => setEditingTodo({...editingTodo, startDate: e.target.value})}
+                    />
                   </Form.Group>
                 </Col>
                 <Col md={6}>
                   <Form.Group className="mb-3">
                     <Form.Label>Thời gian dự kiến hoàn thành</Form.Label>
-                                          <Form.Control
-                        type="datetime-local"
-                        value={editingTodo.dueDate ? formatDateTimeForInput(editingTodo.dueDate) : ''}
-                        onChange={(e) => setEditingTodo({...editingTodo, dueDate: e.target.value})}
-                      />
+                    <Form.Control
+                      type="datetime-local"
+                      value={editingTodo.dueDate ? formatDateTimeForInput(editingTodo.dueDate) : ''}
+                      onChange={(e) => setEditingTodo({...editingTodo, dueDate: e.target.value})}
+                    />
                   </Form.Group>
                 </Col>
               </Row>
