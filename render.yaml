@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: todo-backend
+    env: node
+    sourceDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8001
+      - key: MONGO_URI
+        value: mongodb+srv://lyhuuthanhtv:OyJgFuu02T4Ewi8O@cluster0.sgv9a1t.mongodb.net/web-to-to-list?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+
+  - type: web
+    name: todo-frontend
+    env: static
+    sourceDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://todo-backend.onrender.com/api
